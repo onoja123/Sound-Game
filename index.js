@@ -50,4 +50,14 @@ document.addEventListener("keydown", function(event){
             default:
                 console.log(nope)
     }
-    }
+}
+
+function animationButton(changeKey){
+    let active = document.querySelector("." + changeKey);
+    active.classList.add("pressed");
+    
+    setTimeOut(()=>{
+        active.classList.remove("pressed")
+    }, 100)
+    
+}
