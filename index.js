@@ -6,12 +6,14 @@ for(let i = 0; i < noOfbuttons; i++)
     document.querySelectorAll(".drum")[i].addEventListener("click", function(){
         let nope = this.innerHTML;
         makeSound(nope)
+        animationButton(nope)
        
 })
 
 //Detecting Keyboard press
 document.addEventListener("keydown", function(event){
     makeSound(event.key)
+    animationButton(event.key)
 })
     function makeSound(key){
         switch (key){
